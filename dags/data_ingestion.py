@@ -22,7 +22,9 @@ workflow = DAG(
     start_date=datetime(2023, 1, 1),
     #the pattern below runs script at 06:00 on the 1st day of each month
     schedule_interval="0 6 1 * *",
-    #end_date = (2023, 7, 1)
+    #use max_active_runs if your tasks tend to fail all at once 
+    max_active_runs=1
+    end_date = datetime(2023, 7, 1)
 )
 with workflow:
     curl_task = BashOperator(
