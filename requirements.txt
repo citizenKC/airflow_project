@@ -4,3 +4,4 @@ sqlalchemy
 psycopg2-binary
 apache-airflow-providers-postgres
 python-decouple
+python-dotenv==1.0.0

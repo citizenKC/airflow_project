@@ -9,6 +9,6 @@ RUN apt-get update
 
 USER airflow
 COPY requirements.txt /tmp/
-COPY .env  $AIRFLOW_HOME/.env
+COPY .env  $AIRFLOW_HOME
 
 RUN pip install -r /tmp/requirements.txt
